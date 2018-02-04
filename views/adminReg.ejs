@@ -1,0 +1,37 @@
+<% include ./partials/header %>
+
+
+<div class="container-fluid mt-5">
+  <h2 class="text-center"> Admin Sign Up!</h2>
+  <div class="row justify-content-center no-gutters">
+    <div class="col-lg-6 col-md-8">
+      <form class="form-horizontal col-xs-6 col-xs-offset-3 form-border" action="/register" method="POST">
+        <div class="form-group">
+          <label class="control-label" for="username">Email:</label>
+          <div class="input-group input-group-md"> 
+            <input type="username" id="username" name="username" class="form-control" placeholder="john@doe.com">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label" for="password">Password:</label>
+          <div class="input-group input-group-md"> 
+            <input type="password" name="password" class="form-control" id="password" placeholder="Enter password">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label" for="admin">Admin Code:</label>
+          <div class="input-group input-group-md"> 
+            <input type="text" name="admin" class="form-control" id="admin" placeholder="Admin Code">
+          </div>
+        </div>
+        <div class="btn-toolbar justify-content-center">
+          <button type="submit" class="btn btn-primary m-3">Sign Up!</button>
+          <button name="cancel" type="cancel" class="btn btn-danger m-3"><a class=text-white href="/r">Cancel</a></button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<!--<% include ./partials/footer %>-->

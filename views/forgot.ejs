@@ -1,0 +1,21 @@
+<% include partials/header %>
+
+<div class="row justify-content-center no-gutters mt-4">
+  <div class="col-lg-6 col-md-8">
+<form class="form-horizontal" action="/forgot" method="POST">
+  <div class="form-group">
+    <label class="control-label" for="email">Email Address:</label>
+    <div class="input-group input-group-md">
+      <span class="input-group-addon">
+        <i class="fa fa-envelope" aria-hidden="true"></i>
+      </span>
+      <input type="username" name="username" class="form-control" id="username" placeholder="Enter Email Address">
+    <div class="text-center form-block form-group">
+      <p>Enter email to reset password </p>
+        <button class="btn btn-primary btn-md">
+          <a href="/register" class="text-white">
+            <i class="" aria-hidden="true"></i> Reset Password</a>
+        </button>
+      </div>
+    </div><!--input group-->
+  </div><!--form group-->

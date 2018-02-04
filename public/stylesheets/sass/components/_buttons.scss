@@ -1,0 +1,77 @@
+.nav-btn--blue, .btn-login, .btn-register {
+    background-color: $btn-blue;
+    border: none;
+    color: $color-white;
+    padding: 1.2rem;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.5rem;
+    border-radius: .5rem;
+    outline: none;
+    cursor: pointer;
+    
+    &:link,
+    &:visited {
+        text-decoration: none;
+        border: none;
+    }
+
+    &:hover {
+        transform: translateY(-1px);
+        background-color: $btn-blue-light;
+        
+    }
+    
+    &:active {
+        transform: translateY(0px);
+    }
+    
+    &--checkbox {
+        margin-left: 3rem;
+    }
+    
+    &--register {
+        border: none;
+        color: $color-white;
+        text-align: center;
+        text-decoration: none;
+    }
+    
+}
+
+.btn-cancel {
+    background-color: $color-cancel;
+    border: none;
+    color: $color-white;
+    padding: 1.2rem;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.5rem;
+    border-radius: .5rem;
+    outline: none;
+    cursor: pointer;
+    margin-left: 5rem;
+
+    &:link,
+    &:visited {
+        text-decoration: none;
+        border: none;
+    }
+
+    &:hover {
+        transform: translateY(-1px);
+        background-color: rgba($color-cancel, .9);
+        
+    }
+    
+    &:active {
+        transform: translateY(0px);
+    }
+    
+    &--cancel {
+        border: none;
+        color: $color-white;
+        text-align: center;
+        text-decoration: none;
+    }
+}

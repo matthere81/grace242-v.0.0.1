@@ -1,0 +1,57 @@
+<% include ../partials/header %>
+
+<div class="container mt-3">
+    <div class="row mb-3 hidden-sm-down">
+        <div class="col-sm-8 serif-text text-center fam-btn">
+            <a class="btn btn-primary btn-lg" href="/members/new" role="button">Add Your Family!</a>
+        </div>
+        <div class="col-sm-4 my-auto form-group">
+            <form action="/members" method="GET" class="form-inline">
+
+                    <input type="text" name="search" placeholder="Search the directory" class="form-control">
+                    <button tye="submit" class="btn btn-secondary ml-1"><i class="fa fa-search" aria-hidden="true"></i></button>
+                </div>
+            </form>
+            </div>
+        </div>
+<div class="container mt-3 hidden-md-up">
+    <div class="row mb-3">
+        <div class="col-12 serif-text text-center">
+            <a class="btn btn-primary btn-lg" href="/members/new" role="button">Add Your Family!</a>
+        </div>
+    </div>
+    <div class="row p-3">
+        <div class="col-12 my-auto form-group mx-auto">
+            <form action="/members" method="GET" class="form-inline">
+
+                    <input type="text" name="search" placeholder="Search the directory" class="form-control">
+                    <button tye="submit" class="btn btn-secondary ml-1"><i class="fa fa-search" aria-hidden="true"></i></button>
+                </div>
+            </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--<div class="container-fluid">-->
+    <div class="row justify-content-center" style="display:flex; flex-wrap;">
+        <% if(noMatch) { %>
+            <h3><%= noMatch %></h3>
+        <% } %>
+        <% members.forEach(function(member){ %>
+            <div class="card-deck mb-4 pr-3">
+                <div class="card text-center">
+                    <div class="card-block">
+                        <a href="/members/<%= member._id %>">
+                        <img class="thumbnail card-img-top" src="<%= member.image %>"></a>    
+                            <h4 class="card-title text-center">The <%= member.name %> Family</h4>
+                                <p class="text-center m-0 serif-text">
+                                    <a href="/members/<%= member._id %>" class="btn btn-primary">More Info</a>
+                                </p>
+                    </div><!--card-block-->
+                </div><!--card-->
+            </div><!--card-deck-->   
+        <% }); %>
+    </div><!--row text-center-->
+</div>
+
+<% include ../partials/footer %>

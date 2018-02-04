@@ -1,0 +1,31 @@
+<% include ./partials/header %>
+
+
+<div class="register">
+  <h2 class="">Sign Up!</h2>
+    <form class="register--form" action="/register" method="POST">
+        <div class="form-group">
+          <label class="register--label" for="username">Email:</label>
+            <input type="username" id="username" name="username" class="register--input" placeholder="john@doe.com">
+        </div>
+        <div class="form-group">
+          <label class="register--label" for="password">Password:</label>
+            <input type="password" name="password" class="register--input" id="password" placeholder="Enter password">
+        </div>
+        <div class="form-group">
+          <label class="register--label" for="admin">Admin Code:</label>
+            <input type="text" name="adminCode" class="register--input" id="adminCode" placeholder="Admin Code">
+        </div> 
+        <div class="register-submit--cancel">
+          <button type="submit" class="btn-register">Sign Up!</button>
+          <div>
+            <button name="cancel" type="cancel" class="btn-cancel"><a href="/" class="btn-cancel--cancel">Cancel</a></button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<% include ./partials/footer %>

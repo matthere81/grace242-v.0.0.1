@@ -1,0 +1,73 @@
+.login, .register {
+    // display: grid;
+    // grid-template-columns: 40vw;
+    // justify-content: center;
+    // grid-template-rows: 20vh auto auto;
+    // align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+    
+    &--form {
+        background: $color-white;
+        width: 50%;
+        box-shadow: 0 0 .5rem rgba(#000, .7);
+        position: relative;
+        border-radius: 1rem;
+        padding: 2rem 5rem 4rem 5rem;
+        margin-top: 2rem;
+    }
+    
+    &--label {
+        display: inline-block;
+        position: relative;
+        font-family: inherit;
+        padding-top: 2rem;
+        font-weight: bold;
+        width: 100%;
+        vertical-align: center;
+    }
+    
+    &--input {
+        display: block;
+        width: 90%;
+        font-size: 1.5rem;
+        outline: none;
+        border: none;
+        border-bottom: .1rem solid #ccc;
+        font-family: inherit;
+        padding-top: .4rem;
+        margin: .5rem 3.5rem .5rem 3.5rem;
+    
+         &:focus {
+            background-color: rgba($color-light-blue, .1);
+        }
+    }
+    
+}
+
+.login-submit, .register-submit {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    align-items: center;
+    
+    & p {
+        margin-right: 2rem;
+    }
+    
+    &--cancel {
+        display: flex;
+        justify-content: center;
+        margin-top: 3rem;
+    }
+}
+
+.forgot{
+    border: none;
+    border-radius: .5rem;
+    outline: none;
+    cursor: pointer;
+}

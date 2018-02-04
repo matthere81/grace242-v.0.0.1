@@ -1,0 +1,186 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  font-family: Lato, sans-serif; }
+
+body {
+  line-height: 1.7;
+  box-sizing: border-box;
+  background: linear-gradient(to right bottom, rgba(144, 202, 249, 0.9), rgba(255, 255, 255, 0.9)), url(https://images.unsplash.com/photo-1476455479340-25ee0cee09bf?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=32d9f0ec6a40876f996935cacd5ecce2&auto=format&fit=crop&w=2378&q=80);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh; }
+
+.nav--text {
+  color: #fff;
+  text-decoration: none;
+  font-size: 2rem; }
+
+.nav--btn {
+  font-family: Lato, sans-serif;
+  color: #fff; }
+
+.login > h1, .register > h1 {
+  font-size: 4rem;
+  font-family: inherit;
+  text-align: center;
+  color: #212121; }
+
+.login h2, .register h2 {
+  font-size: 3.5rem; }
+
+.login--form, .register--form {
+  color: #212121;
+  text-decoration: none;
+  font-size: 2rem; }
+
+.login--icon, .register--icon {
+  font-size: 1.5rem;
+  transform: translateY(-0.2rem);
+  background-color: rgba(79, 195, 247, 0.5);
+  padding: .7rem;
+  border-radius: 50%; }
+
+.forgot {
+  text-align: center;
+  text-decoration: none;
+  font-size: inherit;
+  font-family: inherit; }
+
+.footer {
+  font-size: 1.5rem;
+  font-family: inherit; }
+
+.nav-btn--blue, .btn-login, .btn-register {
+  background-color: #1e88e5;
+  border: none;
+  color: #fff;
+  padding: 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+  border-radius: .5rem;
+  outline: none;
+  cursor: pointer; }
+  .nav-btn--blue:link, .nav-btn--blue:visited, .btn-login:link, .btn-login:visited, .btn-register:link, .btn-register:visited {
+    text-decoration: none;
+    border: none; }
+  .nav-btn--blue:hover, .btn-login:hover, .btn-register:hover {
+    transform: translateY(-1px);
+    background-color: #2196f3; }
+  .nav-btn--blue:active, .btn-login:active, .btn-register:active {
+    transform: translateY(0px); }
+  .nav-btn--blue--checkbox, .btn-login--checkbox, .btn-register--checkbox {
+    margin-left: 3rem; }
+  .nav-btn--blue--register, .btn-login--register, .btn-register--register {
+    border: none;
+    color: #fff;
+    text-align: center;
+    text-decoration: none; }
+
+.btn-cancel {
+  background-color: #d9534f;
+  border: none;
+  color: #fff;
+  padding: 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+  border-radius: .5rem;
+  outline: none;
+  cursor: pointer;
+  margin-left: 5rem; }
+  .btn-cancel:link, .btn-cancel:visited {
+    text-decoration: none;
+    border: none; }
+  .btn-cancel:hover {
+    transform: translateY(-1px);
+    background-color: rgba(217, 83, 79, 0.9); }
+  .btn-cancel:active {
+    transform: translateY(0px); }
+  .btn-cancel--cancel {
+    border: none;
+    color: #fff;
+    text-align: center;
+    text-decoration: none; }
+
+.footer {
+  display: flex;
+  justify-content: center; }
+
+.nav {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: #212121;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1.5rem;
+  grid-column-gap: 10%; }
+  .nav--img {
+    width: 10rem; }
+    .nav--img:hover {
+      transform: translateY(-1px); }
+  .nav--text {
+    justify-items: center;
+    text-align: center; }
+    .nav--text:hover {
+      transform: translateY(-1px); }
+
+.login, .register {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem; }
+  .login--form, .register--form {
+    background: #fff;
+    width: 50%;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.7);
+    position: relative;
+    border-radius: 1rem;
+    padding: 2rem 5rem 4rem 5rem;
+    margin-top: 2rem; }
+  .login--label, .register--label {
+    display: inline-block;
+    position: relative;
+    font-family: inherit;
+    padding-top: 2rem;
+    font-weight: bold;
+    width: 100%;
+    vertical-align: center; }
+  .login--input, .register--input {
+    display: block;
+    width: 90%;
+    font-size: 1.5rem;
+    outline: none;
+    border: none;
+    border-bottom: .1rem solid #ccc;
+    font-family: inherit;
+    padding-top: .4rem;
+    margin: .5rem 3.5rem .5rem 3.5rem; }
+    .login--input:focus, .register--input:focus {
+      background-color: rgba(79, 195, 247, 0.1); }
+
+.login-submit, .register-submit {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  align-items: center; }
+  .login-submit p, .register-submit p {
+    margin-right: 2rem; }
+  .login-submit--cancel, .register-submit--cancel {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem; }
+
+.forgot {
+  border: none;
+  border-radius: .5rem;
+  outline: none;
+  cursor: pointer; }

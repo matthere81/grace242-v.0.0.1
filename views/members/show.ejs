@@ -1,0 +1,47 @@
+<% include ../partials/header %>
+
+    <div class="col-sm-12 cabin-land mt-3">
+        <h3 class="text-center">The <%= member.name %> Family</h3>
+    </div>
+    <div class="container show-border">
+    <div class="row">    
+    <div class="col clearfix">
+          <img src="<%= member.image %>" class="show-img rounded">
+    </div>
+        <div class="col cabin-land my-auto mid-border">
+            <p class="m-0">
+                <% if(!member.partnerName) { %>
+                    <%= member.firstName %> <%= member.name %>
+                <% } else { %>
+                    <%= member.firstName %> & <%= member.partnerName %> <%= member.name %>
+                <% } %>
+            </p>
+            <p class="mem-info">
+                <span><a href="mailto:<%= member.email %>"><%= member.email %></a></span>
+                <span><%= member.tel %></span>
+                <span>Children: <%= member.numOfChildren %></span>
+            </p>
+        </div>
+        <div class="container">
+            <div class="row m-4">
+                <h5 class="cabin-show">About Us:</h5>
+                    <div class="col-12 display-about">
+                        <p><%= member.aboutUs %></p>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container serif-text">
+<% if(currentUser && member.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %> 
+<div class="row justify-content-center mt-3">
+                        <a class="btn btn-warning mr-3" href="/members/<%= member._id %>/edit">Edit</a>
+                        <form class="delete-form" action="/members/<%= member._id %>?_method=DELETE" method="POST">
+                            <button class="btn btn-danger">Delete</button>
+                        </form>
+                        <% } %>
+</div>        
+</div>
+
+<% include ../partials/footer %>

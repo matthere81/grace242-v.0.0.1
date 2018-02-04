@@ -1,0 +1,77 @@
+<% include ../partials/header %>
+
+<div class="container">
+    <h2 class="cabin-land text-center pb-2 mt-4">Add Your Family!</h2>
+</div>
+
+<div class="container form-border p-1">
+    <div class="row justify-content-center serif-text-new">
+        <div class="col-md-12">
+            <form action="/members" method="POST" enctype="multipart/form-data">
+                <fieldset class="col-md-6 col-sm-12 fs-l">
+                    <legend>Family Info</legend>
+                        <div class="form-group">
+                            <label for="name">Family Name:</label> 
+                            <input id="name" name="name" required="required" class="form-control here" type="text">
+                        </div>
+                        <div class="form-group">
+                            <label for="firstName">Your First Name:</label> 
+                            <input id="firstName" name="firstName" required="required" class="form-control here" type="text">
+                        </div>
+                        <div class="form-group">
+                            <label for="partnerName">Partner's First Name:</label> 
+                            <input id="partnerName" name="partnerName" class="form-control here" type="text">
+                        </div>
+                        <div class="form-group">
+                            <label for="numOfChildren">Number of Children:</label> 
+                        <div>
+                            <select id="numOfChildren" name="numOfChildren" class="custom-select">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div>
+                    </div> 
+                </fieldset>
+                <fieldset class="col-md-6 col-sm-12">
+                    <legend>Contact Info</legend>
+                        <div class="form-group">
+                            <label for="email">Email:</label> 
+                            <input id="email" name="email" required="required" class="form-control here" type="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="tel">Phone:</label> 
+                            <input id="tel" name="tel" class="form-control here" type="tel" required
+                       pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                        </div>
+                        <div class="col-sm-5 pt-2">
+                            <!--<form >-->
+                            <label for="image">Upload Family Photo</label>
+                            <input type="file" name="image" accept="image/*" required >
+                            <!--</form>-->
+                        </div>
+                        </div>
+                        <div class="form-group mx-auto mt-3">
+                            <label for="aboutUs"><h4>About Us:</h4></label>
+                            <textarea class="form-control" type="text" name="aboutUs" rows="10" cols="75"></textarea>
+                 </fieldset>  
+                <div class="form-group text-center mt-5">
+                    <button name="submit" type="submit" role="button" class="btn btn-lg btn-primary">Submit</button>
+                    <button name="cancel" type="button" class="btn btn-lg btn-danger"><a class=text-white href="/members">Cancel</a></button>
+                </div>
+                </div>
+            </form>
+
+</div>
+</div>
+
+
+<% include ../partials/footer %>
